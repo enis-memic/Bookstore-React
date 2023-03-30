@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import styles from './Nav.module.css';
 
 const Navbar = [
   { to: '/', text: 'Books' },
@@ -7,12 +8,14 @@ const Navbar = [
 ];
 
 const Nav = () => (
-  <nav>
+  <nav className={styles.navigation}>
     <h1>Bookstore CMS</h1>
-    <ul>
+    <ul className={styles.item}>
       {Navbar.map((link) => (
         <li key={link.to}>
-          <NavLink to={link.to}>{link.text}</NavLink>
+          <NavLink to={link.to} className={styles.link}>
+            {link.text}
+          </NavLink>
         </li>
       ))}
     </ul>

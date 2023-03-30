@@ -1,4 +1,4 @@
-### Math Magician
+### Bookstore
 
 # 📗 Table of Contents
 
@@ -23,7 +23,7 @@
 
 ## About the Project
 
-> This project is built with React.js, it is about SPA with calculator to practice React.
+> This project is built with React.js, it is a Bookstore for adding and keeping track of the books you are reading.
 
 ## Built With
 
