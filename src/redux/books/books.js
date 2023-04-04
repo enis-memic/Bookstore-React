@@ -4,9 +4,27 @@ export const REMOVE_BOOK = 'books/books/REMOVE_BOOK';
 
 // Initial State
 const initialState = {
-  books: [],
+  books: [
+    {
+      item_id: 'item1',
+      title: 'The Great Gatsby',
+      author: 'John Smith',
+      category: 'Fiction',
+    },
+    {
+      item_id: 'item2',
+      title: 'Anna Karenina',
+      author: 'Leo Tolstoy',
+      category: 'Fiction',
+    },
+    {
+      item_id: 'item3',
+      title: 'The Selfish Gene',
+      author: 'Richard Dawkins',
+      category: 'Nonfiction',
+    },
+  ],
   isLoading: false,
-  getId: null,
 };
 
 // Reducers
@@ -17,13 +35,13 @@ const bookReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        payload,
+        books: [...state.books, payload],
       };
     case REMOVE_BOOK:
       return {
         ...state,
         isLoading: false,
-        getId: state.books.filter((book) => book.id !== payload),
+        books: state.books.filter((book) => book.id !== payload),
       };
     default:
       return state;

@@ -15,7 +15,7 @@ const categoriesReducer = (state = initialState, action) => {
     case SHOW_STATUS:
       return {
         ...state,
-        categories: payload,
+        categories: [payload],
         isLoading: false,
       };
 

@@ -1,28 +1,25 @@
+/*eslint-disable*/
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Books from './Books';
 import AddBook from './AddBook';
 
-const BookList = () => {
-  const books = [
-    {
-      id: 1,
-      title: 'One Simple Book',
-      author: 'Enis',
-    },
-    {
-      id: 2,
-      title: 'Second Book',
-      author: 'Enis 2',
-    },
-  ];
+const BooksList = () => {
+  const bookings = useSelector((state) => state.books);
   return (
     <div>
-      {books.map((book) => (
-        <Books key={book.id} title={book.title} author={book.author} />
-      ))}
+      {bookings &&
+        bookings.map((book) => (
+          <Books
+            id={book.id}
+            title={book.title}
+            author={book.author}
+            key={book.id}
+          />
+        ))}
       <AddBook />
     </div>
   );
 };
 
-export default BookList;
+export default BooksList;
