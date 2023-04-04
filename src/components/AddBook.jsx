@@ -1,50 +1,43 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import React, { useState, useEffect } from 'react';
 
 const AddBook = () => {
-  const [values, setValues] = useState({
-    id: uuidv4(),
-    title: '',
-    author: '',
-  });
+  const [bookList, setBookList] = useState([]);
 
-  const dispatch = useDispatch();
+  useEffect(() => {
+    const storedBookList = JSON.parse(localStorage.getItem('bookList'));
+    if (storedBookList) {
+      setBookList(storedBookList);
+    }
+  }, []);
 
-  const changeHandler = (e) => {
-    const { name, value } = e.target;
-    setValues((preData) => ({
-      ...preData,
-      [name]: value,
-    }));
+  const handleRemove = (index) => {
+    const storedBookList = JSON.parse(localStorage.getItem('bookList'));
+    const updatedBookList = storedBookList.filter((_, i) => i !== index);
+    localStorage.setItem('bookList', JSON.stringify(updatedBookList));
+    setBookList(updatedBookList);
   };
-
-  const clickHandler = (e) => {
-    e.preventDefault();
-    setValues({ id: uuidv4(), title: '', author: '' });
-    dispatch(addBook(values));
-  };
-
   return (
     <div>
-      <form onSubmit={clickHandler}>
-        <input
-          type="text"
-          name="title"
-          placeholder="Title"
-          value={values.title}
-          onChange={changeHandler}
-        />
-        <input
-          type="text"
-          name="author"
-          placeholder="Author"
-          value={values.author}
-          onChange={changeHandler}
-        />
-        <button type="submit">Submit</button>
-      </form>
+      <div className="book-list">
+        {bookList.map((book) => (
+          <li className="book-list-item" key={book.id}>
+            <div className="list-details">
+              <h2 className="book-category">Action</h2>
+              <h2 className="book-title">{book.title}</h2>
+              <h3 className="book-author">{book.author}</h3>
+              <div className="list-detail-buttons">
+                <button
+                  type="button"
+                  className="m-button"
+                  onClick={() => handleRemove(book.id)}
+                >
+                  Remove
+                </button>
+              </div>
+            </div>
+          </li>
+        ))}
+      </div>
     </div>
   );
 };

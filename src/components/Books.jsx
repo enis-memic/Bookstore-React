@@ -6,12 +6,14 @@ import { removeBook } from '../redux/books/books';
 
 const Books = (props) => {
   const dispatch = useDispatch();
-  const { title, author, id } = props;
+  const {
+    title, author, id, key,
+  } = props;
   const removeBooks = () => {
     dispatch(removeBook(id));
   };
   return (
-    <div>
+    <div key={key}>
       <div className={StyleSheet.book}>
         <div className={styles.description}>
           <p>{title}</p>
