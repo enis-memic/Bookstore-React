@@ -88,7 +88,7 @@ const BooksList = () => {
             </div>
             <div className="list-details last">
               <h2>current chapter</h2>
-              <h3>Chapter 3: &quot;a lesson learned&quot;</h3>
+              <h3>Chapter 3: &quot;A lesson learned&quot;</h3>
               <button type="button">Update Progress</button>
             </div>
           </li>
