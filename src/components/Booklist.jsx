@@ -80,7 +80,7 @@ const BooksList = () => {
               </div>
             </div>
             <div className="list-details middle">
-              <img src={spinner} alt="spinner" className="image-spina" />
+              <img src={spinner} alt="spinner" className="image-spinner" />
               <div className="percentage">
                 <h2>87%</h2>
                 <h3>completed</h3>
@@ -116,12 +116,13 @@ const BooksList = () => {
             />
             <select
               id="category"
+              className="Category"
               name="category"
               required
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             >
-              <option value="">--Please choose category--</option>
+              <option value="">Category</option>
               <option value="Fiction">Fiction</option>
               <option value="Nonfiction">Nonfiction</option>
               <option value="Science Fiction">Science Fiction</option>

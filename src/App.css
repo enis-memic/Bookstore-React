@@ -7,7 +7,7 @@ body {
   width: 100%;
 }
 
-header {
+/* header {
   position: sticky;
   top: 0;
   padding: 0% 2%;
@@ -16,30 +16,10 @@ header {
   box-shadow: 2px 2px 8px rgb(194, 194, 194);
   display: flex;
   flex-direction: row;
-}
-
-nav {
-  margin-right: 0;
-  text-align: right;
-  gap: 160px;
-  margin-left: 100px;
-  display: flex;
-  flex-direction: row;
-}
-
-nav .routing {
-  text-decoration: none;
-  color: rgb(187, 187, 187);
-  font-weight: 400;
-  font-size: 19px;
-}
-
-nav .activated {
-  color: black;
-}
+} */
 
 h1 {
-  color: rgb(0, 202, 202);
+  color: rgb(8, 154, 238);
   margin-left: 10%;
 }
 
@@ -102,7 +82,7 @@ h2 {
   font-weight: bold;
   text-transform: capitalize;
   font-family: 'Poppins', sans-serif;
-  color: rgb(26, 206, 230);
+  color: rgb(8, 154, 238);
   font-size: 17px;
   margin: 0 0;
 }
@@ -116,7 +96,7 @@ h2 {
 
 .list-detail-buttons button {
   border: none;
-  color: rgb(26, 206, 230);
+  color: rgb(8, 154, 238);
   text-transform: uppercase;
   background-color: white;
   font-size: 15px;
@@ -130,7 +110,7 @@ h2 {
   padding: 0% 10%;
 }
 
-.image-spina {
+.image-spinner {
   width: 100px;
   height: 100px;
   margin-right: 10px;
@@ -225,14 +205,15 @@ h2 {
   margin-top: -1px;
 }
 
-#category {
-  width: 13%;
+.FormContainer form .Category {
+  width: 29%;
   margin-right: 2%;
   padding-left: 10px;
   height: 36px;
   border: 1px solid rgb(235, 235, 235);
   font-size: 17px;
   margin-top: -1px;
+  background-color: #fff;
 }
 
 .statusB button {

@@ -7,17 +7,19 @@ const Categories = () => {
   const dispatch = useDispatch();
   const { categories } = useSelector((state) => state.categories);
   return (
-    <div>
-      <button
-        className="{styles.btn}"
-        type="button"
-        onClick={() => dispatch(checkStatus())}
-      >
-        Check status
-      </button>
-      {categories.map((category) => (
-        <p key={uuidv4()}>{category}</p>
-      ))}
+    <div className="homeContent">
+      <div className="statusB">
+        <button
+          className="{styles.btn}"
+          type="button"
+          onClick={() => dispatch(checkStatus())}
+        >
+          Check status
+        </button>
+        {categories.map((category) => (
+          <p key={uuidv4()}>{category}</p>
+        ))}
+      </div>
     </div>
   );
 };
