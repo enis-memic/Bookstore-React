@@ -35,7 +35,7 @@ const BooksList = () => {
   };
 
   const handleRemoveBook = (item_id) => {
-    dispatch(removeBook(item_id));
+    dispatch(removeBook({ item_id }));
   };
 
   return (

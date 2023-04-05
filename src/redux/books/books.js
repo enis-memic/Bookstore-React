@@ -13,7 +13,7 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
 export const addBook = createAsyncThunk(
   'books/addBook',
   async ({ title, author, category }) => {
-    const item_id = Math.random().toString(36).substring(2, 11); // Generate random ID
+    const item_id = Math.random().toString(36).substring(2, 11);
     const response = await axios.post(
       `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${app_id}/books`,
       {
@@ -33,6 +33,7 @@ export const removeBook = createAsyncThunk(
     await axios.delete(
       `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${app_id}/books/${item_id}`,
     );
+
     return item_id;
   },
 );
