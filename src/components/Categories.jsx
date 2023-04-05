@@ -8,7 +8,11 @@ const Categories = () => {
   const { categories } = useSelector((state) => state.categories);
   return (
     <div>
-      <button type="button" onClick={() => dispatch(checkStatus())}>
+      <button
+        className="{styles.btn}"
+        type="button"
+        onClick={() => dispatch(checkStatus())}
+      >
         Check status
       </button>
       {categories.map((category) => (
