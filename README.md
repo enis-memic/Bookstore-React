@@ -31,6 +31,7 @@
 - Jest
 - Gitflow
 - Redux
+- API
 
 ### Key Features
 
@@ -41,6 +42,7 @@
 - Redux
 - Adding books
 - Removing books
+- API
 
 <!-- ## Live Demo
 
@@ -77,7 +79,6 @@ Clone this repository to your desired folder:
 ## 🔭 Future Features
 
 - UI improvements
-- API
 
 ## 🤝 Contributing <a name="contributing"></a>
 
