@@ -43,6 +43,7 @@
 - Adding books
 - Removing books
 - API
+- UI improvements
 
 <!-- ## Live Demo
 
@@ -78,7 +79,9 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features
 
-- UI improvements
+- Live demo
+- Categories functionality
+- Functionality on all buttons and links
 
 ## 🤝 Contributing <a name="contributing"></a>
 
