@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { BsPersonCircle } from 'react-icons/bs';
 import styles from './Nav.module.css';
 
 const Navbar = [
@@ -19,6 +20,9 @@ const Nav = () => (
         </li>
       ))}
     </ul>
+    <div className={styles.user}>
+      <BsPersonCircle />
+    </div>
   </nav>
 );
 

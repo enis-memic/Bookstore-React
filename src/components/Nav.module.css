@@ -1,4 +1,5 @@
 .navigation {
+  font-family: 'Poppins', sans-serif;
   width: 100%;
   height: 5.938rem;
   margin: 0 0 2.375rem;
@@ -30,8 +31,12 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: #121212;
+  color: #444444;
   text-decoration: none;
+  text-transform: uppercase;
+}
+.links:active {
+  color: #121212;
 }
 
 .item {
