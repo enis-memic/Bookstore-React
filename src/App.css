@@ -42,7 +42,8 @@ h2 {
   background-color: white;
   align-items: center;
   border-radius: 6px;
-  padding: 1% 0%;
+  margin-left: 5%;
+  width: 90%;
 }
 
 .list-details {
