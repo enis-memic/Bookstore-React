@@ -31,10 +31,11 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: #444444;
+  color: #444;
   text-decoration: none;
   text-transform: uppercase;
 }
+
 .links:active {
   color: #121212;
 }
